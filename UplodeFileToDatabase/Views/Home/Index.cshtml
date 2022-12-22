@@ -1,0 +1,22 @@
+﻿@model UplodeFileToDatabase.Models.IndexVM
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+
+    <form  method="post" asp-area="" asp-controller="Home" asp-action="Index" enctype="multipart/form-data">
+        
+        
+        <div class="mb-3 ">
+            <label for="formFile" class="form-label">Attach a file</label>
+            <input class="form-control" type="file" asp-for="fileUpload">
+        </div>
+        
+        <button type="submit" class="btn btn-primary deactivate-account">Submit</button>
+
+    </form>
+</div>
